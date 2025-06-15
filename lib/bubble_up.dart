@@ -1,14 +1,23 @@
-import 'package:chatting_app/onboarding_screen.dart';
+import 'package:chatting_app/core/routing/app_router.dart';
+import 'package:chatting_app/core/routing/router_constants.dart';
+import 'package:chatting_app/features/onboarding/ui/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BubbleUp extends StatelessWidget {
   const BubbleUp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+    return ScreenUtilInit(
+      designSize: Size(360, 809),
+      minTextAdapt: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: RouterConstants.onboarding,
+        onGenerateRoute: AppRouter().generateRoute,
+        home: OnboardingScreen(),
+      ),
     );
   }
 }
