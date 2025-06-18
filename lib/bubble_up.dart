@@ -1,5 +1,5 @@
 import 'package:chatting_app/core/routing/app_router.dart';
-import 'package:chatting_app/core/routing/router_constants.dart';
+import 'package:chatting_app/core/routing/app_routes.dart';
 import 'package:chatting_app/features/onboarding/ui/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,9 +14,8 @@ class BubbleUp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: RouterConstants.onboarding,
-        onGenerateRoute: AppRouter().generateRoute,
-        home: OnboardingScreen(),
+        initialRoute: AppRoutes.onboarding,
+        onGenerateRoute: AppRouter(context).generateRoute,
       ),
     );
   }
