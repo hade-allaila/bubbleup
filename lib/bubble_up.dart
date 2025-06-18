@@ -1,6 +1,5 @@
 import 'package:chatting_app/core/routing/app_router.dart';
 import 'package:chatting_app/core/routing/app_routes.dart';
-import 'package:chatting_app/features/onboarding/ui/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
