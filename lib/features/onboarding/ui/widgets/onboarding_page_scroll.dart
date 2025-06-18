@@ -1,18 +1,22 @@
 import 'package:chatting_app/core/statics/statics.dart';
-import 'package:chatting_app/core/theming/app_text_styles.dart';
-import 'package:chatting_app/features/onboarding/data/onboarding_page_model.dart';
+import 'package:chatting_app/features/onboarding/logic/onboarding_provider.dart';
 import 'package:chatting_app/features/onboarding/ui/widgets/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 class OnBoardingPageScroll extends StatelessWidget {
-  const OnBoardingPageScroll({super.key});
+  OnBoardingPageScroll({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 500.h,
       child: PageView.builder(
+        controller: context.read<OnboardingProvider>().controller,
+        onPageChanged: (index) {
+          context.read<OnboardingProvider>().chagePage(index);
+        },
         itemCount: onBoardingPages.length,
         itemBuilder: (context, index) {
           return OnBoardingPage(pageInfo: onBoardingPages[index]);
