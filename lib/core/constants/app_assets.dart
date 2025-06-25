@@ -11,8 +11,11 @@ class AppAssets {
   static const String onboardingImage2 =
       '$_imagesRootDir/onboarding_screen2.png';
 
+// app lotties
   static const String errorDilogLottie = "$_lottiesRootDir/error_image.json";
   static const String loadingDialogLottie = "$_lottiesRootDir/loading.json";
   static const String notfoundImageLottie =
       "$_lottiesRootDir/not_found_error.json";
+  static const String empty_chats_home_screen =
+      "$_lottiesRootDir/empty_chats_home_screen.json";
 }

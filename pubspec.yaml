@@ -70,13 +70,15 @@ flutter:
   fonts:
     - family: Rubik
       fonts:
-        - asset: fonts/Rubik-Light.ttf
-        - asset: fonts/rubik/Rubik-Regular.ttf
-        - asset: fonts/Rubik-Medium.ttf
-        - asset: fonts/Rubik-SemiBold.ttf
-        - asset: fonts/Rubik-Bold.ttf
-        - asset: fonts/Rubik-ExtraBold.ttf
-
+        - asset: assets/fonts/rubik/Rubik-Light.ttf
+        - asset: assets/fonts/rubik/Rubik-Regular.ttf
+        - asset: assets/fonts/rubik/Rubik-Medium.ttf
+        - asset: assets/fonts/rubik/Rubik-SemiBold.ttf
+        - asset: assets/fonts/rubik/Rubik-Bold.ttf
+        - asset: assets/fonts/rubik/Rubik-ExtraBold.ttf
+    - family: Caprasimo
+      fonts:
+        - asset: assets/fonts/caprasimo/Caprasimo-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
