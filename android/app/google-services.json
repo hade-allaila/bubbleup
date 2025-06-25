@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "379989117909",
+    "project_id": "chatapp-8fdec",
+    "storage_bucket": "chatapp-8fdec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379989117909:android:e67cdde7f970623d4bcb5c",
+        "android_client_info": {
+          "package_name": "com.example.breakingbadapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxUhcS9ZlTH3U4uQVCinpABpFaLP6P-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379989117909:android:dea55ba70f4cbd1b4bcb5c",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxUhcS9ZlTH3U4uQVCinpABpFaLP6P-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379989117909:android:ef0caee2d274f62b4bcb5c",
+        "android_client_info": {
+          "package_name": "com.example.chatting_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxUhcS9ZlTH3U4uQVCinpABpFaLP6P-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
