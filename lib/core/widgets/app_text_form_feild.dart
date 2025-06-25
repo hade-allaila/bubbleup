@@ -9,6 +9,8 @@ class AppTextFormFeild extends StatelessWidget {
   final Icon prefixIcon;
   final bool isObscured;
   final Widget? suffixIcon;
+  final TextEditingController controller;
+  final String? Function(String?) validator;
   const AppTextFormFeild({
     super.key,
     required this.label,
@@ -16,12 +18,16 @@ class AppTextFormFeild extends StatelessWidget {
     required this.prefixIcon,
     this.isObscured = false,
     this.suffixIcon = null,
+    required this.controller,
+    required this.validator,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       obscureText: isObscured,
+      validator: validator,
       decoration: InputDecoration(
         label: label,
         hintText: hintText,
@@ -35,9 +41,13 @@ class AppTextFormFeild extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.r),
           borderSide: BorderSide(color: AppColors.blue),
         ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: BorderSide(color: AppColors.red),
+        ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.r),
-          borderSide: BorderSide(color: Colors.redAccent),
+          borderSide: BorderSide(color: AppColors.red),
         ),
         prefixIcon: prefixIcon,
       ),

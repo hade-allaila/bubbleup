@@ -3,8 +3,10 @@ import 'package:chatting_app/core/theming/app_text_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginTitle extends StatelessWidget {
-  const LoginTitle({super.key});
+class AuthTitle extends StatelessWidget {
+  final String title;
+  final String description;
+  const AuthTitle({super.key, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -14,19 +16,16 @@ class LoginTitle extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.blue,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(80),
-          bottomRight: Radius.circular(80),
+          bottomLeft: Radius.circular(100),
+          bottomRight: Radius.circular(100),
         ),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Login ", style: AppTextStyles.font24WhiteBold),
+          Text(title, style: AppTextStyles.font24WhiteBold),
           SizedBox(height: 10.h),
-          Text(
-            "Make Account to start your next chat Instantly !",
-            style: AppTextStyles.font14WhiteRegular,
-          ),
+          Text(description, style: AppTextStyles.font14WhiteRegular),
         ],
       ),
     );

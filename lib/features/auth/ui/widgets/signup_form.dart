@@ -5,20 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class SignupForm extends StatefulWidget {
+  const SignupForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignupForm> createState() => _SignupFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignupFormState extends State<SignupForm> {
   bool isObscuredText = true;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 30.w),
       child: Form(
+        key: context.read<AppAuthProvider>().formKey,
         child: Column(
           children: [
             AppTextFormFeild(
@@ -26,7 +27,7 @@ class _LoginFormState extends State<LoginForm> {
                 if (value == null || value.isEmpty) {
                   return "Email Can't be empty";
                 }
-                if (RegexHelper.isEmailValid(value)) {
+                if (!RegexHelper.isEmailValid(value)) {
                   return "you have to Enter a valid Email Address !";
                 }
                 return null;
@@ -38,11 +39,11 @@ class _LoginFormState extends State<LoginForm> {
             ),
             SizedBox(height: 20.h),
             AppTextFormFeild(
-              validator: (value) { 
-                if(value == null || value.isEmpty) { 
+              validator: (value) {
+                if (value == null || value.isEmpty) {
                   return "Password Can't be empty";
                 }
-                if(!RegexHelper.isPasswordValid(value)) { 
+                if (!RegexHelper.isPasswordValid(value)) {
                   return "Password is so weak";
                 }
                 return null;
