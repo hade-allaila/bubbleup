@@ -1,7 +1,6 @@
-import 'dart:async';
-
 import 'package:chatting_app/core/routing/app_routes.dart';
 import 'package:chatting_app/core/statics/statics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingProvider extends ChangeNotifier {
@@ -23,7 +22,9 @@ class OnboardingProvider extends ChangeNotifier {
       try {
         Navigator.pushReplacementNamed(context, AppRoutes.login);
       } catch (e) {
+        if(kDebugMode) { 
         print(e);
+        }
       }
       return;
     } else {

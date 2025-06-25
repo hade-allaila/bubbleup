@@ -1,15 +1,13 @@
-import 'package:chatting_app/core/statics/statics.dart';
-import 'package:chatting_app/core/theming/app_colors.dart';
 import 'package:chatting_app/features/onboarding/logic/onboarding_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 class CurrentPageDotsIndicator extends StatelessWidget {
-  int dotsLength;
-  Color activeDotColor;
-  Color inactiveDotsColor;
-  CurrentPageDotsIndicator({
+  final int dotsLength;
+  final Color activeDotColor;
+  final Color inactiveDotsColor;
+  const CurrentPageDotsIndicator({
     super.key,
     required this.dotsLength,
     required this.activeDotColor,

@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 class OnBoardingPageScroll extends StatelessWidget {
-  OnBoardingPageScroll({super.key});
+  const OnBoardingPageScroll({super.key});
 
   @override
   Widget build(BuildContext context) {
