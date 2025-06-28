@@ -1,4 +1,5 @@
 import 'package:chatting_app/core/extentions/navigation_extention.dart';
+import 'package:chatting_app/core/routing/app_routes.dart';
 import 'package:chatting_app/core/theming/app_colors.dart';
 import 'package:chatting_app/core/theming/app_text_styles.dart';
 import 'package:chatting_app/features/home/ui/widgets/empty_chats.dart';
@@ -28,7 +29,9 @@ class HomeScreen extends StatelessWidget {
       ),
       body: EmptyChats(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          context.pushNamed(AppRoutes.chat);
+        },
         child: Icon(Icons.chat, size: 24, color: Colors.white),
         backgroundColor: AppColors.blue,
         shape: CircleBorder(),
