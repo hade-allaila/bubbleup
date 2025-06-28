@@ -3,6 +3,7 @@ import 'package:chatting_app/core/widgets/not_found_page.dart';
 import 'package:chatting_app/features/auth/logic/app_auth_provider.dart';
 import 'package:chatting_app/features/auth/ui/screens/sign_in_screen.dart';
 import 'package:chatting_app/features/auth/ui/screens/sign_up_screen.dart';
+import 'package:chatting_app/features/chat/ui/screens/chat_screen.dart';
 import 'package:chatting_app/features/home/ui/screens/home_screen.dart';
 import 'package:chatting_app/features/onboarding/logic/onboarding_provider.dart';
 import 'package:chatting_app/features/onboarding/ui/screens/onboarding_screen.dart';
@@ -40,6 +41,8 @@ class AppRouter {
         return checkauthintecation(HomeScreen(), SignInScreen());
       case AppRoutes.home:
         return checkauthintecation(HomeScreen(), SignInScreen());
+      case AppRoutes.chat:
+        return MaterialPageRoute(builder: (_) => ChatScreen());
       default:
         return MaterialPageRoute(builder: (_) => NotFoundPage());
     }
